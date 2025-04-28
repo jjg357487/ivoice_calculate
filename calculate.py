@@ -75,9 +75,8 @@ def move_files(src_folder, dest_folder, file_list):
         shutil.move(src, dest)
 
 
-# 使用示例
 if __name__ == "__main__":
-    with open("path.txt", "r") as f:
+    with open("path.txt", "r",encoding="utf-8") as f:
         source_folder= f.readline()
     month=input("请输入月份：")
     target_folder = rf"C:\Users\22205\Desktop\postgraduate\money\{month}"
@@ -87,3 +86,4 @@ if __name__ == "__main__":
 
     move_files(source_folder, target_folder, selected_files)
     process_folder(target_folder,"no_path",month)
+    process_folder(source_folder)
